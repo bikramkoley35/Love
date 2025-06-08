@@ -40,8 +40,11 @@ function hideNote() {
 }
 // Function for Yes button
 function goToNotes() {
+  let audio = new Audio('assets/audio2.mp3');
+  audio.play();
   window.location.href = 'index.html';
 }
+
 
 // For No button fun animation
 const noButton = document.getElementById('noButton');
