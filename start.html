@@ -8,28 +8,40 @@
   
 
 </head>
-<audio autoplay loop>
-  <source src="assets/audio2.mp3" type="audio/mpeg">
+<!-- <audio autoplay loop>
+  <source src="assets/audio2.mp3" type="audio/mp3"/>
   Your browser does not support the audio element.
-</audio>
+</audio> -->
 <body class="start-page">
 
-  <h1>I love you Sonaa ❤️</h1>
-  <h2>Do you love me?</h2>
+  <!-- Blur overlay -->
+  <div id="overlay" class="overlay">
+    <button class="start-button" onclick="startSurprise()">Start Surprise ❤️</button>
+  </div>
 
-  <div class="proposal-animation">
-  <video autoplay muted loop playsinline style="width: 250px; border-radius: 20px;">
-    <source src="assets/proposal.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+  <!-- Main content (initially blurred) -->
+  <div id="content" class="blurred">
+    <h1>I love you Sonaa ❤️</h1>
+    <h2>Do you love me?</h2>
 
+    <div class="proposal-animation">
+      <video autoplay muted loop playsinline style="width: 250px; border-radius: 20px;">
+        <source src="assets/proposal.mp4" type="video/mp4" />
+      </video>
+    </div>
 
-  <div class="buttons">
-    <button class="yes-button" onclick="goToNotes()">Yes ❤️</button>
-    <button class="no-button" id="noButton">No 😢</button>
+    <div class="buttons">
+      <button class="yes-button" onclick="goToNotes()">Yes ❤️</button>
+      <button class="no-button" id="noButton">No 😢</button>
+    </div>
+
+    <!-- Background music -->
+    <audio id="bgMusic" loop>
+      <source src="assets/audio2.mp3" type="audio/mpeg" />
+    </audio>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
