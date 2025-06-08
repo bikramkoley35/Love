@@ -38,15 +38,39 @@ function showNote(index) {
 function hideNote() {
   document.getElementById('modal').style.display = 'none';
 }
-// Function for Yes button
+// // Function for Yes button
+// function goToNotes() {
+//   window.location.href = 'index.html';
+// }
+
+// // For No button fun animation
+// const noButton = document.getElementById('noButton');
+
+// noButton.addEventListener('mouseover', () => {
+//   const i = Math.floor(Math.random() * window.innerWidth);
+//   const j = Math.floor(Math.random() * window.innerHeight);
+//   noButton.style.position = 'absolute';
+//   noButton.style.left = i + 'px';
+//   noButton.style.top = j + 'px';
+// });
+function startSurprise() {
+  // Remove overlay
+  document.getElementById('overlay').style.display = 'none';
+
+  // Remove blur
+  document.getElementById('content').classList.remove('blurred');
+
+  // Play music
+  const music = document.getElementById('bgMusic');
+  music.play().catch(e => console.log(e));
+}
+
 function goToNotes() {
-  let audio = new Audio('assets/audio2.mp3');
-  audio.play();
+  localStorage.setItem('playMusic', 'yes');
   window.location.href = 'index.html';
 }
 
-
-// For No button fun animation
+// No button fun
 const noButton = document.getElementById('noButton');
 
 noButton.addEventListener('mouseover', () => {
@@ -56,3 +80,4 @@ noButton.addEventListener('mouseover', () => {
   noButton.style.left = i + 'px';
   noButton.style.top = j + 'px';
 });
+
