@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  background: linear-gradient(to top, #a1c4fd, #c2e9fb);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 3em;
+  color: #ff4081;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.island {
+  height: 80vh;
+  width: 70vw;
+  position: absolute;
+  border: grey;
+  border-width: 5px;
+  border-style: double;
+  border-radius: 5px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -52%); }
+  50% { transform: translate(-50%, -48%); }
+}
+
+.note-button {
+  position: absolute;
+  background: #7ff4d1;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.note-button:hover {
+  background: #ff8da1;
+  color: white;
+}
+
+.note-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.note-content {
+  background: white;
+  padding: 20px;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto; /* enable scrolling if content is large */
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.note-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.note-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Make sure the close button is visible at the bottom and styled */
+.close {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.close:hover {
+  background: #e73370;
+}
+/* First page styles */
+.start-page {
+  background-color: #fff0f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.start-page h1 {
+  font-size: 3em;
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.start-page h2 {
+  font-size: 2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.proposal-animation img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.yes-button, .no-button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-button {
+  background-color: #ff4081;
+  color: white;
+}
+
+.yes-button:hover {
+  background-color: #e73370;
+}
+
+.no-button {
+  background-color: #ccc;
+  color: black;
+  position: relative;
+}

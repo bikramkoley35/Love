@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Floating Island of Memories for Sonaa ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="assets/audio1.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1 class="header">Happy Anniversary Sonaa❤️</h1>
+    <img src="assets/background.jpg" class="island" alt="Floating Island" />
+    <!-- 13 note buttons -->
+<button class="note-button" style="top: 18%; left: 40%;" onclick="showNote(0)">🌳 Tree</button>
+<button class="note-button" style="top: 18%; left: 50%;" onclick="showNote(1)">🎈 Balloon</button>
+<button class="note-button" style="top: 30%; left: 57%;" onclick="showNote(2)">🏡 House</button>
+<button class="note-button" style="top: 40%; left: 61%;" onclick="showNote(3)">🌟 Star</button>
+<button class="note-button" style="top: 50%; left: 57%;" onclick="showNote(4)">🌹 Rose</button>
+<button class="note-button" style="top: 30%; left: 33%;" onclick="showNote(5)">💌 Letter</button>
+<button class="note-button" style="top: 40%; left: 29%;" onclick="showNote(6)">🎵 Music</button>
+<button class="note-button" style="top: 65%; left: 53%;" onclick="showNote(7)">📷 Photo</button>
+<button class="note-button" style="top: 65%; left: 37%;" onclick="showNote(8)">🍫 Chocolate</button>
+<button class="note-button" style="top: 50%; left: 33%;" onclick="showNote(9)">🌈 Rainbow</button>
+<button class="note-button" style="top: 45%; left: 45%;" onclick="showNote(10)">💫 Dream</button>
+<button class="note-button" style="top: 80%; left: 44%;" onclick="showNote(11)">🤝 Holding Hands</button>
+<button class="note-button" style="top: 30%; left: 45%;" onclick="showNote(12)">👀 Staring</button>
+
+  </div>
+
+  <div class="note-modal" id="modal">
+    <div class="note-content">
+      <img id="note-photo" src="" alt="Couple Photo" />
+      <p id="note-text"></p>
+      <button class="close" onclick="hideNote()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
